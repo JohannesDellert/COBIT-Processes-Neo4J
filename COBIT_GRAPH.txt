@@ -1,0 +1,709 @@
+//Create Domains
+CREATE (EDM:Domain {title:'Evaluate, Direct and Monitor', discipline: 'Governance'})
+CREATE (APO:Domain {title:'Align, Plan and Organise', discipline: 'Management'})
+CREATE (BAI:Domain {title:'Build, Acquire and Implement', discipline: 'Management'})
+CREATE (DSS:Domain {title:'Deliver, Service and Support', discipline: 'Management'})
+CREATE (MEA:Domain {title:'Monitor, Evaluate and Assess', discipline: 'Management'})
+// Create processes and practices
+//EDM
+CREATE (EDM01:Process {name:'Ensure Governance Framework Setting and Maintenance', itg: ['ITG01', 'ITG03', 'ITG07']})
+CREATE (EDM01_01:Practice {name:'Evaluate the governance system'})
+CREATE (EDM01_02:Practice {name:'Direct the governance system'})
+CREATE (EDM01_03:Practice {name:'Monitor the governance system'})
+CREATE (EDM02:Process {name:'Ensure Benefits Delivery', itg: ['ITG01', 'ITG05', 'ITG06','ITG07','ITG17']})
+CREATE (EDM02_01:Practice {name:'Evaluate value optimisation'})
+CREATE (EDM02_02:Practice {name:'Direct value optimisation'})
+CREATE (EDM02_03:Practice {name:'Monitor value optimisation'})
+CREATE (EDM03:Process {name:'Ensure Risk Optimisation', itg: ['ITG04', 'ITG06', 'ITG10','ITG15']})
+CREATE (EDM03_01:Practice {name:'Evaluate risk management'})
+CREATE (EDM03_02:Practice {name:'Direct risk management'})
+CREATE (EDM03_03:Practice {name:'Monitor risk management'})
+CREATE (EDM04:Process {name:'Ensure Resource Optimisation', itg: ['ITG09', 'ITG11', 'ITG16']})
+CREATE (EDM04_01:Practice {name:'Evaluate resource management'})
+CREATE (EDM04_02:Practice {name:'Direct resource management'})
+CREATE (EDM04_03:Practice {name:'Monitor resource management'})
+CREATE (EDM05:Process {name:'Ensure Stakeholder Transparency', itg: ['ITG03', 'ITG06', 'ITG07']})
+CREATE (EDM05_01:Practice {name:'Evaluate stakeholder reporting requirements'})
+CREATE (EDM05_02:Practice {name:'Direct stakeholder communication and reporting'})
+CREATE (EDM05_03:Practice {name:'Monitor stakeholder communication'})
+//APO
+CREATE (APO01:Process {name:'Manage the IT Management Framework', itg: ['ITG01', 'ITG02', 'ITG09','ITG11', 'ITG15', 'ITG16','ITG17']})
+CREATE (APO01_01:Practice {name:'Define the organisational structure'})
+CREATE (APO01_02:Practice {name:'Establish roles and responsibilities'})
+CREATE (APO01_03:Practice {name:'Maintain the enablers of the management system'})
+CREATE (APO01_04:Practice {name:'Communicate management objectives and direction'})
+CREATE (APO01_05:Practice {name:'Optimise the placement of the IT function'})
+CREATE (APO01_06:Practice {name:'Define information (data) and system ownership'})
+CREATE (APO01_07:Practice {name:'Manage continual improvement of processes'})
+CREATE (APO01_08:Practice {name:'Maintain compliance with policies and procedures'})
+CREATE (APO02:Process {name:'Manage Strategy', itg: ['ITG01', 'ITG07', 'ITG17']})
+CREATE (APO02_01:Practice {name:'Understand enterprise direction'})
+CREATE (APO02_02:Practice {name:'Assess the current environment, capabilities and performance'})
+CREATE (APO02_03:Practice {name:'Define the target IT capabilities'})
+CREATE (APO02_04:Practice {name:'Conduct a gap analysis'})
+CREATE (APO02_05:Practice {name:'Define the strategic plan and road map'})
+CREATE (APO02_06:Practice {name:'Communicate the IT strategy and direction'})
+CREATE (APO03:Process {name:'Manage Enterprise Architecture', itg: ['ITG01', 'ITG09', 'ITG11']})
+CREATE (APO03_01:Practice {name:'Develop the enterprise architecture vision'})
+CREATE (APO03_02:Practice {name:'Define reference architecture'})
+CREATE (APO03_03:Practice {name:'Select opportunities and solutions'})
+CREATE (APO03_04:Practice {name:'Define architecture implementation'})
+CREATE (APO03_05:Practice {name:'Provide enterprise architecture services'})
+CREATE (APO04:Process {name:'Manage Innovation', itg: ['ITG05', 'ITG08', 'ITG09', 'ITG11', 'ITG17']})
+CREATE (APO04_01:Practice {name:'Create an environment conducive to innovation'})
+CREATE (APO04_02:Practice {name:'Maintain an understanding of the enterprise environment'})
+CREATE (APO04_03:Practice {name:'Monitor and scan the technology environment'})
+CREATE (APO04_04:Practice {name:'Assess the potential of emerging technologies and innovation ideas'})
+CREATE (APO04_05:Practice {name:'Recommend appropriate further initiatives'})
+CREATE (APO04_06:Practice {name:'Monitor the implementation and use of innovation'})
+CREATE (APO05:Process {name:'Manage Portfolio', itg: ['ITG01', 'ITG05', 'ITG13']})
+CREATE (APO05_01:Practice {name:'Establish the target investment mix'})
+CREATE (APO05_02:Practice {name:'Determine the availability and sources of funds'})
+CREATE (APO05_03:Practice {name:'Evaluate and select programmes to fund.'})
+CREATE (APO05_04:Practice {name:'Monitor, optimise and report on investment portfolio performance'})
+CREATE (APO05_05:Practice {name:'Maintain portfolios'})
+CREATE (APO05_06:Practice {name:'Manage benefits achievement'})
+CREATE (APO06:Process {name:'Manage Budget and Costs', itg: ['ITG05', 'ITG06']})
+CREATE (APO06_01:Practice {name:'Manage finance and accounting'})
+CREATE (APO06_02:Practice {name:'Prioritise resource allocation'})
+CREATE (APO06_03:Practice {name:'Create and maintain budgets'})
+CREATE (APO06_04:Practice {name:'Model and allocate costs'})
+CREATE (APO06_05:Practice {name:'Maintain portfolios'})
+CREATE (APO06_06:Practice {name:'Manage costs'})
+CREATE (APO07:Process {name:'Manage Human Resources', itg: ['ITG01', 'ITG11', 'ITG13', 'ITG16', 'ITG17']})
+CREATE (APO07_01:Practice {name:'Maintain adequate and appropriate staffing'})
+CREATE (APO07_02:Practice {name:'Identify key IT personnel'})
+CREATE (APO07_03:Practice {name:'Maintain the skills and competencies of personnel'})
+CREATE (APO07_04:Practice {name:'Evaluate employee job performance'})
+CREATE (APO07_05:Practice {name:'Plan and track the usage of IT and business human resources'})
+CREATE (APO07_06:Practice {name:'Manage contract staff'})
+CREATE (APO08:Process {name:'Manage Relationships', itg: ['ITG01', 'ITG07', 'ITG12', 'ITG17']})
+CREATE (APO08_01:Practice {name:'Understand business expectations'})
+CREATE (APO08_02:Practice {name:'Identify opportunities, risk and constraints for IT to enhance the business'})
+CREATE (APO08_03:Practice {name:'Manage the business relationship'})
+CREATE (APO08_04:Practice {name:'Co-ordinate and communicate'})
+CREATE (APO08_05:Practice {name:'Provide input to the continual improvement of services'})
+CREATE (APO09:Process {name:'Manage Service Agreements', itg: ['ITG07', 'ITG14']})
+CREATE (APO09_01:Practice {name:'Identify IT services'})
+CREATE (APO09_02:Practice {name:'Catalogue IT-enabled services'})
+CREATE (APO09_03:Practice {name:'Define and prepare service agreements'})
+CREATE (APO09_04:Practice {name:'Monitor and report service levels.'})
+CREATE (APO09_05:Practice {name:'Review service agreements and contracts'})
+CREATE (APO10:Process {name:'Manage Suppliers', itg: ['ITG04', 'ITG07', 'ITG09']})
+CREATE (APO10_01:Practice {name:'Identify and evaluate supplier relationships and contracts'})
+CREATE (APO10_02:Practice {name:'Select suppliers'})
+CREATE (APO10_03:Practice {name:'Manage supplier relationships and contracts'})
+CREATE (APO10_04:Practice {name:'Manage supplier risk'})
+CREATE (APO10_05:Practice {name:'Monitor supplier performance and compliance'})
+CREATE (APO11:Process {name:'Manage Quality', itg: ['ITG05', 'ITG07', 'ITG13']})
+CREATE (APO11_01:Practice {name:'Establish a quality management system'})
+CREATE (APO11_02:Practice {name:'Define and manage quality standards, practices and procedures'})
+CREATE (APO11_03:Practice {name:'Focus quality management on customers'})
+CREATE (APO11_04:Practice {name:'Perform quality monitoring, control and reviews'})
+CREATE (APO11_05:Practice {name:'Integrate quality management into solutions for development and service delivery'})
+CREATE (APO11_06:Practice {name:'Maintain continuous improvement'})
+CREATE (APO12:Process {name:'Manage Risk', itg: ['ITG02', 'ITG04', 'ITG06', 'ITG10', 'ITG13']})
+CREATE (APO12_01:Practice {name:'Collect data'})
+CREATE (APO12_02:Practice {name:'Analyse risk'})
+CREATE (APO12_03:Practice {name:'Maintain a risk profile'})
+CREATE (APO12_04:Practice {name:'Articulate risk'})
+CREATE (APO12_05:Practice {name:'Define a risk management action portfolio'})
+CREATE (APO12_06:Practice {name:'Respond to risk'})
+CREATE (APO13:Process {name:'Manage Security', itg: ['ITG02', 'ITG04', 'ITG06', 'ITG10', 'ITG14']})
+CREATE (APO13_01:Practice {name:'Establish and maintain an ISMS'})
+CREATE (APO13_02:Practice {name:'Define and manage an information security risk treatment plan'})
+CREATE (APO13_03:Practice {name:'Monitor and review the ISMS'})
+//BAI
+CREATE (BAI01:Process {name:'Manage Programmes and Projects', itg: ['ITG01', 'ITG04', 'ITG05', 'ITG13']})
+CREATE (BAI01_01:Practice {name:'Maintain a standard approach for programme and project management'})
+CREATE (BAI01_02:Practice {name:'Initiate a programme'})
+CREATE (BAI01_03:Practice {name:'Manage stakeholder engagement'})
+CREATE (BAI01_04:Practice {name:'Develop and maintain the programme plan'})
+CREATE (BAI01_05:Practice {name:'Launch and execute the programme'})
+CREATE (BAI01_06:Practice {name:'Monitor, control and report on the programme outcomes'})
+CREATE (BAI01_07:Practice {name:'Start up and initiate projects within a programme'})
+CREATE (BAI01_08:Practice {name:'Plan projects'})
+CREATE (BAI01_09:Practice {name:'Manage programme and project qualityt'})
+CREATE (BAI01_10:Practice {name:'Manage programme and project risk'})
+CREATE (BAI01_11:Practice {name:'Monitor and control projects'})
+CREATE (BAI01_12:Practice {name:'Manage project resources and work packages'})
+CREATE (BAI01_13:Practice {name:'Close a project or iteration'})
+CREATE (BAI01_14:Practice {name:'Close a programme'})
+CREATE (BAI02:Process {name:'Manage Requirements Definition', itg: ['ITG01', 'ITG07', 'ITG12']})
+CREATE (BAI02_01:Practice {name:'Define and maintain business functional and technical requirements'})
+CREATE (BAI02_02:Practice {name:'Perform a feasibility study and formulate alternative solutions'})
+CREATE (BAI02_03:Practice {name:'Manage requirements risk'})
+CREATE (BAI02_04:Practice {name:'Obtain approval of requirements and solutions'})
+CREATE (BAI03:Process {name:'Manage Solutions Identification and Build', itg: ['ITG07']})
+CREATE (BAI03_01:Practice {name:'Design high-level solutions'})
+CREATE (BAI03_02:Practice {name:'Design detailed solution components'})
+CREATE (BAI03_03:Practice {name:'Develop solution components'})
+CREATE (BAI03_04:Practice {name:'Procure solution components'})
+CREATE (BAI03_05:Practice {name:'Build solutions'})
+CREATE (BAI03_06:Practice {name:'Perform quality assurance'})
+CREATE (BAI03_07:Practice {name:'Prepare for solution testing'})
+CREATE (BAI03_08:Practice {name:'Execute solution testing'})
+CREATE (BAI03_09:Practice {name:'Manage changes to requirements'})
+CREATE (BAI03_10:Practice {name:'Maintain solutions'})
+CREATE (BAI03_11:Practice {name:'Define IT services and maintain the service portfolio'})
+CREATE (BAI04:Process {name:'Manage Solutions Identification and Build', itg: ['ITG07', 'ITG11', 'ITG14']})
+CREATE (BAI04_01:Practice {name:'Assess current availability, performance and capacity and create a baseline'})
+CREATE (BAI04_02:Practice {name:'Assess business impact'})
+CREATE (BAI04_03:Practice {name:'Plan for new or changed service requirements'})
+CREATE (BAI04_04:Practice {name:'Monitor and review availability and capacity'})
+CREATE (BAI04_05:Practice {name:'Investigate and address availability, performance and capacity issues'})
+CREATE (BAI05:Process {name:'Manage Organisational Change Enablement', itg: ['ITG08', 'ITG13', 'ITG17']})
+CREATE (BAI05_01:Practice {name:'Establish the desire to change'})
+CREATE (BAI05_02:Practice {name:'Form an effective implementation team'})
+CREATE (BAI05_03:Practice {name:'Communicate desired vision'})
+CREATE (BAI05_04:Practice {name:'Empower role players and identify short-term wins'})
+CREATE (BAI05_05:Practice {name:'Enable operation and use'})
+CREATE (BAI05_06:Practice {name:'Embed new approaches'})
+CREATE (BAI05_07:Practice {name:'Sustain changes'})
+CREATE (BAI06:Process {name:'Manage Changes', itg: ['ITG04', 'ITG07', 'ITG10']})
+CREATE (BAI06_01:Practice {name:'Evaluate, prioritise and authorise change requests'})
+CREATE (BAI06_02:Practice {name:'Manage emergency changes'})
+CREATE (BAI06_03:Practice {name:'Track and report change status'})
+CREATE (BAI06_04:Practice {name:'Close and document the changes'})
+CREATE (BAI07:Process {name:'Manage Change Acceptance and Transitioning', itg: ['ITG08', 'ITG12']})
+CREATE (BAI07_01:Practice {name:'Establish an implementation plan'})
+CREATE (BAI07_02:Practice {name:'Plan business process, system and data conversion'})
+CREATE (BAI07_03:Practice {name:'Plan acceptance tests'})
+CREATE (BAI07_04:Practice {name:'Establish a test environment'})
+CREATE (BAI07_05:Practice {name:'Perform acceptance tests'})
+CREATE (BAI07_06:Practice {name:'Promote to production and manage releases'})
+CREATE (BAI07_07:Practice {name:'Provide early production support'})
+CREATE (BAI07_08:Practice {name:'Perform a post-implementation review'})
+CREATE (BAI08:Process {name:'Manage Knowledge', itg: ['ITG09', 'ITG17']})
+CREATE (BAI08_01:Practice {name:'Nurture and facilitate a knowledge-sharing culture'})
+CREATE (BAI08_02:Practice {name:'Identify and classify sources of information'})
+CREATE (BAI08_03:Practice {name:'Organise and contextualise information into knowledge'})
+CREATE (BAI08_04:Practice {name:'Use and share knowledge'})
+CREATE (BAI08_05:Practice {name:'Evaluate and retire information'})
+CREATE (BAI09:Process {name:'Manage Assets', itg: ['ITG06', 'ITG11']})
+CREATE (BAI09_01:Practice {name:'Identify and record current assets'})
+CREATE (BAI09_02:Practice {name:'Manage critical assets'})
+CREATE (BAI09_03:Practice {name:'Manage the asset life cycle'})
+CREATE (BAI09_04:Practice {name:'Optimise asset costs'})
+CREATE (BAI09_05:Practice {name:'Manage licences'})
+CREATE (BAI10:Process {name:'Manage Configuration', itg: ['ITG02', 'ITG11', 'ITG14']})
+CREATE (BAI10_01:Practice {name:'Establish and maintain a configuration model'})
+CREATE (BAI10_02:Practice {name:'Establish and maintain a configuration repository and baseline'})
+CREATE (BAI10_03:Practice {name:'Maintain and control configuration items'})
+CREATE (BAI10_04:Practice {name:'Produce status and configuration reports'})
+CREATE (BAI10_05:Practice {name:'Verify and review integrity of the configuration repository'})
+//DSS
+CREATE (DSS01:Process {name:'Manage Operations', itg: ['ITG04', 'ITG07', 'ITG11']})
+CREATE (DSS01_01:Practice {name:'Perform operational procedures'})
+CREATE (DSS01_02:Practice {name:'Manage outsourced IT services'})
+CREATE (DSS01_03:Practice {name:'Monitor IT infrastructure'})
+CREATE (DSS01_04:Practice {name:'Manage the environment'})
+CREATE (DSS01_05:Practice {name:'Manage facilities'})
+CREATE (DSS02:Process {name:'Manage Operations', itg: ['ITG04', 'ITG07']})
+CREATE (DSS02_01:Practice {name:'Define incident and service request classification schemes'})
+CREATE (DSS02_02:Practice {name:'Record, classify and prioritise requests and incidents'})
+CREATE (DSS02_03:Practice {name:'Verify, approve and fulfil service requests'})
+CREATE (DSS02_04:Practice {name:'Investigate, diagnose and allocate incidents'})
+CREATE (DSS02_05:Practice {name:'Resolve and recover from incidents'})
+CREATE (DSS02_06:Practice {name:'Close service requests and incidents'})
+CREATE (DSS02_07:Practice {name:'Track status and produce reports'})
+CREATE (DSS03:Process {name:'Manage Operations', itg: ['ITG04', 'ITG07', 'ITG11', 'ITG14']})
+CREATE (DSS03_01:Practice {name:'Identify and classify problems'})
+CREATE (DSS03_02:Practice {name:'Investigate and diagnose problems'})
+CREATE (DSS03_03:Practice {name:'Raise known errors'})
+CREATE (DSS03_04:Practice {name:'Resolve and close problems'})
+CREATE (DSS03_05:Practice {name:'Perform proactive problem management'})
+CREATE (DSS04:Process {name:'Manage Continuity', itg: ['ITG04', 'ITG07', 'ITG14']})
+CREATE (DSS04_01:Practice {name:'Define the business continuity policy, objectives and scope'})
+CREATE (DSS04_02:Practice {name:'Maintain a continuity strategy'})
+CREATE (DSS04_03:Practice {name:'Develop and implement a business continuity response'})
+CREATE (DSS04_04:Practice {name:'Exercise, test and review the BCP'})
+CREATE (DSS04_05:Practice {name:'Exercise, test and review the BCP'})
+CREATE (DSS04_06:Practice {name:'Conduct continuity plan training'})
+CREATE (DSS04_07:Practice {name:'Track status and produce reports'})
+CREATE (DSS04_08:Practice {name:'Conduct post-resumption review'})
+CREATE (DSS05:Process {name:'Manage Continuity', itg: ['ITG02', 'ITG04', 'ITG10']})
+CREATE (DSS05_01:Practice {name:'Protect against malware'})
+CREATE (DSS05_02:Practice {name:'Manage network and connectivity security'})
+CREATE (DSS05_03:Practice {name:'Manage endpoint security'})
+CREATE (DSS05_04:Practice {name:'Manage user identity and logical access'})
+CREATE (DSS05_05:Practice {name:'Manage physical access to IT assets'})
+CREATE (DSS05_06:Practice {name:'Manage sensitive documents and output devices'})
+CREATE (DSS05_07:Practice {name:'Monitor the infrastructure for security-related events'})
+CREATE (DSS06:Process {name:'Manage Continuity', itg: ['ITG04', 'ITG07']})
+CREATE (DSS06_01:Practice {name:'Align control activities embedded in business processes with enterprise objectives'})
+CREATE (DSS06_02:Practice {name:'Control the processing of information'})
+CREATE (DSS06_03:Practice {name:'Manage roles, responsibilities, access privileges and levels of authority'})
+CREATE (DSS06_04:Practice {name:'Manage errors and exceptions'})
+CREATE (DSS06_05:Practice {name:'Ensure traceability of information events and accountabilities'})
+CREATE (DSS06_06:Practice {name:'Secure information assets'})
+//MEA
+CREATE (MEA01:Process {name:'Monitor, Evaluate and Assess Performance and Conformance', itg: ['ITG04', 'ITG07', 'ITG11', 'ITG15']})
+CREATE (MEA01_01:Practice {name:'Establish a monitoring approach'})
+CREATE (MEA01_02:Practice {name:'Set performance and conformance targets'})
+CREATE (MEA01_03:Practice {name:'Collect and process performance and conformance data'})
+CREATE (MEA01_04:Practice {name:'Analyse and report performance'})
+CREATE (MEA01_05:Practice {name:'Ensure the implementation of corrective actions'})
+CREATE (MEA02:Process {name:'Monitor, Evaluate and Assess the System of Internal Control', itg: ['ITG02', 'ITG04', 'ITG15']})
+CREATE (MEA02_01:Practice {name:'Monitor internal controls'})
+CREATE (MEA02_02:Practice {name:'Review business process controls effectiveness'})
+CREATE (MEA02_03:Practice {name:'Perform control self-assessments'})
+CREATE (MEA02_04:Practice {name:'Identify and report control deficiencies'})
+CREATE (MEA02_05:Practice {name:'Ensure that assurance providers are independent and qualified'})
+CREATE (MEA02_06:Practice {name:'Plan assurance initiatives'})
+CREATE (MEA02_07:Practice {name:'Scope assurance initiatives'})
+CREATE (MEA02_08:Practice {name:'Execute assurance initiatives'})
+CREATE (MEA03:Process {name:'Monitor, Evaluate and Assess Performance and Conformance', itg: ['ITG02', 'ITG04']})
+CREATE (MEA03_01:Practice {name:'Identify external compliance requirements'})
+CREATE (MEA03_02:Practice {name:'Optimise response to external requirements'})
+CREATE (MEA03_03:Practice {name:'Confirm external compliance'})
+CREATE (MEA03_04:Practice {name:'Obtain assurance of external compliance'})
+CREATE (OutsideCOBIT:Practice {name:'OutsideCOBIT'})
+CREATE (EnterpriseOrganisation:Practice {name:'EnterpriseOrganisation'})
+//Create Inputs
+CREATE
+//EDM
+(MEA03_02)-[:conn {bez:['Communications of changed compliance requirements']}]->(EDM01_01),
+(OutsideCOBIT)-[:conn {bez:['• Business environment trends • Regulations • Governance/decision- making model • Constitution/bylaws/ statutes of organisation']}]->(EDM01_01),
+(MEA01_04)-[:conn {bez:['Performance reports']}]->(EDM01_03),
+(MEA01_05)-[:conn {bez:['Status and results of actions']}]->(EDM01_03),
+(MEA02_01)-[:conn {bez:['• Results of benchmarking and other evaluations • Results of internal control monitoring and reviews']}]->(EDM01_03),
+(MEA02_03)-[:conn {bez:['Results of reviews of self-assessments']}]->(EDM01_03),
+(MEA02_06)-[:conn {bez:['Assurance plans']}]->(EDM01_03),
+(MEA03_03)-[:conn {bez:['Compliance confirmations']}]->(EDM01_03),
+(MEA03_04)-[:conn {bez:['• Reports of non-compliance issues and root causes • Compliance assurance reports']}]->(EDM01_03),
+(OutsideCOBIT)-[:conn {bez:['• Obligations • Audit reports']}]->(EDM01_03),
+(APO02_05)-[:conn {bez:['Strategic road map']}]->(EDM02_01),
+(APO05_02)-[:conn {bez:['Investment return expectations']}]->(EDM02_01),
+(APO05_03)-[:conn {bez:['Selected programmes with return on investment (ROI) milestones']}]->(EDM02_01),
+(APO05_06)-[:conn {bez:['Benefit results and related communication']}]->(EDM02_01),
+(BAI01_06)-[:conn {bez:['Stage-gate review results']}]->(EDM02_01),
+(APO05_04)-[:conn {bez:['Investment portfolio performance reports']}]->(EDM02_03),
+(APO12_01)-[:conn {bez:['Emerging risk issues and factors']}]->(EDM03_01),
+(OutsideCOBIT)-[:conn {bez:['Enterprise risk management principles']}]->(EDM03_01),
+(APO12_03)-[:conn {bez:['Aggregated risk profile, including status of risk management actions']}]->(EDM03_02),
+(OutsideCOBIT)-[:conn {bez:['Enterprise risk management (ERM) profiles and mitigation plans']}]->(EDM03_02),
+(APO12_02)-[:conn {bez:['Risk analysis results']}]->(EDM03_03),
+(APO12_04)-[:conn {bez:['• Opportunities for acceptance of greater risk • Results of third-party risk assessments • Risk analysis and risk profile reports for stakeholders']}]->(EDM03_03),
+(APO02_04)-[:conn {bez:['Gaps and changes required to realise target capability']}]->(EDM04_01),
+(APO07_03)-[:conn {bez:['Skill development plans']}]->(EDM04_01),
+(APO10_02)-[:conn {bez:['Decision results of supplier evaluations']}]->(EDM04_01),
+(EDM02_03)-[:conn {bez:['Actions to improve value delivery']}]->(EDM05_01),
+(EDM03_03)-[:conn {bez:['Risk management issues for the board']}]->(EDM05_01),
+(EDM04_03)-[:conn {bez:['Feedback on allocation and effectiveness of resources and capabilities']}]->(EDM05_01),
+(MEA02_08)-[:conn {bez:['Refined scope']}]->(EDM05_01),
+(APO12_04)-[:conn {bez:['Risk analysis and  risk profile reports for stakeholders']}]->(EDM05_02),
+(MEA02_08)-[:conn {bez:['• Assurance review report • Assurance review results']}]->(EDM05_03),
+//APO
+(EDM01_01)-[:conn{bez:['• Decision-making model • Enterprise governance guiding principles']}]->(APO01_01),
+(APO03_02)-[:conn{bez:['Process architecture model']}]->(APO01_01),
+(EDM01_01)-[:conn{bez:['Authority levels']}]->(APO01_02),
+(EDM04_02)-[:conn{bez:['Assigned responsibilities for resource management']}]->(APO01_02),
+(APO07_03)-[:conn{bez:['• Skill development plans • Skills and competencies matrix']}]->(APO01_02),
+(APO11_01)-[:conn{bez:['Quality management system (QMS) roles, responsibilities and decision rights']}]->(APO01_02),
+(APO13_01)-[:conn{bez:['Information security management system (ISMS) scope statement']}]->(APO01_02),
+(DSS06_03)-[:conn{bez:['• Allocated levels of authority • Allocated roles and responsibilities']}]->(APO01_02),
+(EDM01_01)-[:conn{bez:['Enterprise governance guiding principles']}]->(APO01_03),
+(APO02_05)-[:conn{bez:['Strategic road map']}]->(APO01_03),
+(APO12_01)-[:conn{bez:['Emerging risk issues and factors']}]->(APO01_03),
+(APO12_02)-[:conn{bez:['Risk analysis results']}]->(APO01_03),
+(EDM01_02)-[:conn{bez:['Enterprise governance communication']}]->(APO01_04),
+(EDM04_02)-[:conn{bez:['Principles for safeguarding resources']}]->(APO01_04),
+(APO12_06)-[:conn{bez:['Risk impact communication']}]->(APO01_04),
+(BAI08_01)-[:conn{bez:['Communication on value of knowledge']}]->(APO01_04),
+(DSS04_01)-[:conn{bez:['Policy and objectives for business continuity']}]->(APO01_04),
+(DSS05_01)-[:conn{bez:['Malicious software prevention policy']}]->(APO01_04),
+(DSS05_02)-[:conn{bez:['Connectivity security policy']}]->(APO01_04),
+(DSS05_03)-[:conn{bez:['Security policies for endpoint devices']}]->(APO01_04),
+(OutsideCOBIT)-[:conn{bez:['• Enterprise operating model • Enterprise strategy']}]->(APO01_05),
+(EDM01_03)-[:conn{bez:['Feedback on governance effectiveness and performance']}]->(APO01_07),
+(MEA03_02)-[:conn{bez:['Updated policies, principles, procedures and standards']}]->(APO01_07),
+(DSS01_04)-[:conn{bez:['Environmental policies']}]->(APO01_08),
+(MEA03_02)-[:conn{bez:['Updated policies, principles, procedures and standards']}]->(APO01_08),
+(EDM04_01)-[:conn{bez:['Guiding principles for allocation of resources and capabilities']}]->(APO02_01),
+(APO04_02)-[:conn{bez:['Innovation opportunities linked to business drivers']}]->(APO02_01),
+(OutsideCOBIT)-[:conn{bez:['Enterprise strategy and enterprise strengths, weaknesses, opportunities, threats (SWOT) analysis']}]->(APO02_01),
+(APO06_05)-[:conn{bez:['Cost optimisation opportunities']}]->(APO02_02),
+(APO08_05)-[:conn{bez:['Definition of potential improvement projects']}]->(APO02_02),
+(APO09_01)-[:conn{bez:['Identified gaps in IT services to the business']}]->(APO02_02),
+(APO09_04)-[:conn{bez:['Improvement action plans and remediations']}]->(APO02_02),
+(APO12_01)-[:conn{bez:['Emerging risk issues and factors']}]->(APO02_02),
+(APO12_02)-[:conn{bez:['Risk analysis results']}]->(APO02_02),
+(APO12_03)-[:conn{bez:['Aggregated risk profile, including status of risk management actions']}]->(APO02_02),
+(APO12_05)-[:conn{bez:['Project proposals for reducing risk']}]->(APO02_02),
+(BAI04_03)-[:conn{bez:['• Performance and capacity plans • Prioritised improvements']}]->(APO02_02),
+(BAI04_05)-[:conn{bez:['Corrective actions']}]->(APO02_02),
+(BAI09_01)-[:conn{bez:['Results of fit-for-purpose reviews']}]->(APO02_02),
+(BAI09_04)-[:conn{bez:['• Opportunities to reduce asset costs or increase value • Results of cost optimisation reviews']}]->(APO02_02),
+(APO04_05)-[:conn{bez:['• Analysis of rejected initiatives • Results and recommendations from proof-of-concept initiatives']}]->(APO02_03),
+(EDM02_01)-[:conn{bez:['Evaluation of strategic alignment']}]->(APO02_04),
+(APO04_06)-[:conn{bez:['Assessments of using innovative approaches']}]->(APO02_04),
+(APO05_02)-[:conn{bez:['Investment return expectations']}]->(APO02_04),
+(BAI01_05)-[:conn{bez:['Results of programme goal achievement monitoring']}]->(APO02_04),
+(BAI01_06)-[:conn{bez:['Stage-gate review results']}]->(APO02_04),
+(BAI01_13)-[:conn{bez:['Post-implementation review results']}]->(APO02_04),
+(EDM04_01)-[:conn{bez:['Approved resources plan']}]->(APO02_05),
+(EDM04_03)-[:conn{bez:['• Feedback on allocation and effectiveness of resources and capabilities • Remedial actions  to address resource management deviations']}]->(APO02_05),
+(APO03_01)-[:conn{bez:['• Defined scope of architecture • Architecture concept business case and value proposition']}]->(APO02_05),
+(APO03_02)-[:conn{bez:['Information architecture model']}]->(APO02_05),
+(APO03_03)-[:conn{bez:['• Transition architectures • High-level implementation and migration strategy']}]->(APO02_05),
+(APO05_01)-[:conn{bez:['Feedback on strategy and goals']}]->(APO02_05),
+(APO05_02)-[:conn{bez:['Funding options']}]->(APO02_05),
+(APO06_02)-[:conn{bez:['Budget allocations']}]->(APO02_05),
+(APO06_03)-[:conn{bez:['• IT budget and plan • Budget communications']}]->(APO02_05),
+(APO13_02)-[:conn{bez:['Information security business cases']}]->(APO02_05),
+(BAI09_05)-[:conn{bez:['Action plan to adjust licence numbers and allocations']}]->(APO02_05),
+(DSS04_02)-[:conn{bez:['Approved strategic options']}]->(APO02_05),
+(EDM04_02)-[:conn{bez:['Communication of resourcing strategies']}]->(APO02_06),
+(EDM04_01)-[:conn{bez:['Guiding principles for enterprise architecture']}]->(APO03_01),
+(APO02_05)-[:conn{bez:['Strategic road map']}]->(APO03_01),
+(OutsideCOBIT)-[:conn{bez:['Enterprise strategy']}]->(APO03_01),
+(APO01_01)-[:conn{bez:['• Enterprise operational guidelines • Definition of organisational structure and functions']}]->(APO03_02),
+(APO01_05)-[:conn{bez:['• Defined operational placement of IT function • Evaluation of options for IT organisation']}]->(APO03_02),
+(APO01_06)-[:conn{bez:['Data classification guidelines']}]->(APO03_02),
+(OutsideCOBIT)-[:conn{bez:['Enterprise strategy']}]->(APO03_02),
+(APO02_03)-[:conn{bez:['Proposed enterprise architecture changes']}]->(APO03_03),
+(OutsideCOBIT)-[:conn{bez:['• Enterprise strategies • Enterprise drivers']}]->(APO03_03),
+(OutsideCOBIT)-[:conn{bez:['Enterprise strategy and enterprise SWOT analysis']}]->(APO04_02),
+(OutsideCOBIT)-[:conn{bez:['Emerging technologies']}]->(APO04_03),
+(EDM02_02)-[:conn{bez:['Investment types and criteria']}]->(APO05_01),
+(APO02_05)-[:conn{bez:['• Strategic road map • Risk assessment initiatives • Definition of strategic initiatives']}]->(APO05_01),
+(APO06_02)-[:conn{bez:['Prioritisation and ranking of IT initiatives']}]->(APO05_01),
+(APO09_01)-[:conn{bez:['Definitions of standard services']}]->(APO05_01),
+(BAI03_11)-[:conn{bez:['Service definitions']}]->(APO05_01),
+(EDM02_01)-[:conn{bez:['• Evaluation of investment and services portfolios • Evaluation of strategic alignment']}]->(APO05_03),
+(EDM02_02)-[:conn{bez:['Investment types and criteria']}]->(APO05_03),
+(APO03_01)-[:conn{bez:['Architecture concept business case and value proposition']}]->(APO05_03),
+(APO04_04)-[:conn{bez:['Proof-of-concept scope and outline business case']}]->(APO05_03),
+(APO06_02)-[:conn{bez:['Budget allocations']}]->(APO05_03),
+(APO06_03)-[:conn{bez:['• Budget communications • IT budget and plan']}]->(APO05_03),
+(APO09_01)-[:conn{bez:['Identified gaps in IT services to the business']}]->(APO05_03),
+(APO09_03)-[:conn{bez:['Service level agreements (SLAs)']}]->(APO05_03),
+(BAI01_02)-[:conn{bez:['• Programme benefit realisation plan • Programme mandate and brief • Programme concept business case']}]->(APO05_03),
+(EDM02_01)-[:conn{bez:['Evaluation of investment and services portfolios']}]->(APO05_04),
+(EDM02_03)-[:conn{bez:['• Actions to improve value delivery • Feedback on portfolio and programme performance']}]->(APO05_04),
+(APO04_06)-[:conn{bez:['Evaluation of innovation benefits']}]->(APO05_04),
+(BAI01_06)-[:conn{bez:['Stage-gate review results']}]->(APO05_04),
+(BAI01_14)-[:conn{bez:['Communication of programme retirement and ongoing accountabilities']}]->(APO05_05),
+(BAI03_11)-[:conn{bez:['Updated service portfolio']}]->(APO05_05),
+(BAI01_04)-[:conn{bez:['Programme budget and benefits register']}]->(APO05_06),
+(BAI01_05)-[:conn{bez:['Results of benefit realisation monitoring']}]->(APO05_06),
+(BAI09_01)-[:conn{bez:['Asset register']}]->(APO06_01),
+(EDM02_01)-[:conn{bez:['Evaluation of investment and services portfolios']}]->(APO06_02),
+(EDM02_03)-[:conn{bez:['Actions to improve value delivery']}]->(APO06_02),
+(APO04_04)-[:conn{bez:['Proof-of-concept scope and outline business case']}]->(APO06_02),
+(APO05_02)-[:conn{bez:['Investment return expectations']}]->(APO06_02),
+(APO05_03)-[:conn{bez:['• Business case assessments • Programme business case']}]->(APO06_02),
+(EDM02_03)-[:conn{bez:['Feedback on portfolio and programme performance']}]->(APO06_05),
+(BAI01_02)-[:conn{bez:['Programme benefit realisation plan']}]->(APO06_05),
+(BAI01_04)-[:conn{bez:['Programme budget and benefits register']}]->(APO06_05),
+(BAI01_05)-[:conn{bez:['Results of benefit realisation monitoring']}]->(APO06_05),
+(EDM04_01)-[:conn{bez:['• Approved resources plan • Guiding principles for allocation of resources and capabilities']}]->(APO07_01),
+(EDM04_03)-[:conn{bez:['Remedial actions to address resource management deviations']}]->(APO07_01),
+(APO01_02)-[:conn{bez:['Definition of supervisory practices']}]->(APO07_01),
+(APO06_03)-[:conn{bez:['• Budget communications • IT budget and plan']}]->(APO07_01),
+(OutsideCOBIT)-[:conn{bez:['• Enterprise goals and objectives • Enterprise HR policies and procedures']}]->(APO07_01),
+(EDM01_02)-[:conn{bez:['Reward system approach']}]->(APO07_03),
+(EDM04_03)-[:conn{bez:['Remedial actions to address resource management deviations']}]->(APO07_03),
+(BAI08_03)-[:conn{bez:['Published knowledge repositories']}]->(APO07_03),
+(BAI08_04)-[:conn{bez:['Knowledge awareness and training schemes']}]->(APO07_03),
+(DSS04_06)-[:conn{bez:['• Monitoring results of skills and competencies • Training requirements']}]->(APO07_03),
+(OutsideCOBIT)-[:conn{bez:['Enterprise goals and objectives']}]->(APO07_03),
+(EDM01_02)-[:conn{bez:['Reward system approach']}]->(APO07_04),
+(APO04_01)-[:conn{bez:['Recognition and reward programme']}]->(APO07_04),
+(BAI05_04)-[:conn{bez:['Aligned HR performance objectives']}]->(APO07_04),
+(BAI05_06)-[:conn{bez:['HR performance review results']}]->(APO07_04),
+(DSS06_03)-[:conn{bez:['Allocated access rights']}]->(APO07_04),
+(OutsideCOBIT)-[:conn{bez:['Enterprise goals and objectives']}]->(APO07_04),
+(EDM04_02)-[:conn{bez:['Communication of resourcing strategies']}]->(APO07_05),
+(EDM04_03)-[:conn{bez:['Feedback on allocation and effectiveness of resources and capabilities']}]->(APO07_05),
+(APO06_02)-[:conn{bez:['Budget allocations']}]->(APO07_05),
+(BAI01_04)-[:conn{bez:['Resource requirements and roles']}]->(APO07_05),
+(BAI01_12)-[:conn{bez:['Project resource requirements']}]->(APO07_05),
+(EnterpriseOrganisation)-[:conn{bez:['Current and future portfolios']}]->(APO07_05),
+(OutsideCOBIT)-[:conn{bez:['Enterprise organisation structure']}]->(APO07_05),
+(BAI01_04)-[:conn{bez:['Resource requirements and roles']}]->(APO07_06),
+(BAI01_12)-[:conn{bez:['Project resource requirements']}]->(APO07_06),
+(BAI01_14)-[:conn{bez:['Communication of programme retirement and ongoing accountabilities']}]->(APO07_06),
+(APO02_05)-[:conn{bez:['Strategic road map']}]->(APO08_01),
+(APO09_01)-[:conn{bez:['Identified gaps in IT services to the business']}]->(APO08_02),
+(APO09_04)-[:conn{bez:['• Improvement action plans and remediations • Service level performance reports']}]->(APO08_02),
+(APO11_05)-[:conn{bez:['Root causes of quality delivery failures']}]->(APO08_02),
+(DSS02_02)-[:conn{bez:['Classified and prioritised incidents and service requests']}]->(APO08_03),
+(DSS02_06)-[:conn{bez:['• User confirmation of satisfactory fulfilment or resolution • Closed service requests and incidents']}]->(APO08_03),
+(DSS02_07)-[:conn{bez:['• Request fulfilment status and trends report • Incident status and trends report']}]->(APO08_03),
+(APO09_03)-[:conn{bez:['SLAs']}]->(APO08_04),
+(APO12_06)-[:conn{bez:['Risk impact communications']}]->(APO08_04),
+(BAI05_05)-[:conn{bez:['Operation and use plan']}]->(APO08_04),
+(BAI07_07)-[:conn{bez:['Supplemental support plan']}]->(APO08_04),
+(BAI09_02)-[:conn{bez:['Communications of planned maintenance downtime']}]->(APO08_04),
+(DSS03_04)-[:conn{bez:['Communication of knowledge learned']}]->(APO08_04),
+(APO09_02)-[:conn{bez:['Service catalogues']}]->(APO08_05),
+(APO11_03)-[:conn{bez:['• Results of quality of service, including customer feedback • Customer requirements for quality management']}]->(APO08_05),
+(APO11_04)-[:conn{bez:['Results of quality reviews and audits']}]->(APO08_05),
+(APO11_05)-[:conn{bez:['Results of solution and service delivery quality monitoring']}]->(APO08_05),
+(BAI03_10)-[:conn{bez:['Maintenance plan']}]->(APO08_05),
+(BAI05_05)-[:conn{bez:['Success measures and results']}]->(APO08_05),
+(BAI07_07)-[:conn{bez:['Supplemental support plan']}]->(APO08_05),
+(EDM04_01)-[:conn{bez:['Approved resources plan']}]->(APO09_02),
+(EDM04_02)-[:conn{bez:['Communication of resourcing strategies']}]->(APO09_02),
+(APO05_05)-[:conn{bez:['Updated portfolios of programmes, services and assets']}]->(APO09_02),
+(APO11_03)-[:conn{bez:['Customer requirements for quality management']}]->(APO09_03),
+(EDM04_03)-[:conn{bez:['Remedial actions to address resource management deviations']}]->(APO09_04),
+(APO05_04)-[:conn{bez:['Investment portfolio performance reports']}]->(APO09_04),
+(APO05_06)-[:conn{bez:['• Corrective actions to improve benefit realisation • Benefit results and related communications']}]->(APO09_04),
+(APO08_05)-[:conn{bez:['Satisfaction analyses']}]->(APO09_04),
+(APO11_04)-[:conn{bez:['Results of quality reviews and audits']}]->(APO09_04),
+(APO11_05)-[:conn{bez:['• Root causes of quality delivery failures • Results of solution and service delivery quality monitoring']}]->(APO09_04),
+(DSS02_02)-[:conn{bez:['Classified and prioritised incidents and service requests']}]->(APO09_04),
+(DSS02_06)-[:conn{bez:['Closed service requests and incidents']}]->(APO09_04),
+(DSS02_07)-[:conn{bez:['• Request fulfilment status and trends report • Incident status and trends report']}]->(APO09_04),
+(EDM04_03)-[:conn{bez:['Feedback on allocation and effectiveness of resources and capabilities']}]->(APO09_05),
+(APO11_03)-[:conn{bez:['Results of quality of service, including customer feedback']}]->(APO09_05),
+(APO11_04)-[:conn{bez:['Results of quality reviews and audits']}]->(APO09_05),
+(BAI04_01)-[:conn{bez:['Evaluations against SLAs']}]->(APO09_05),
+(OutsideCOBIT)-[:conn{bez:['Supplier contracts']}]->(APO10_01),
+(BAI02_02)-[:conn{bez:['High-level acquisition/ development plan']}]->(APO10_02),
+(BAI03_04)-[:conn{bez:['Approved acquisition plans']}]->(APO10_03),
+(APO12_04)-[:conn{bez:['• Results of third-party risk assessments • Risk analysis and risk profile reports for stakeholders']}]->(APO10_04),
+(OutsideCOBIT)-[:conn{bez:['Enterprisewide quality system']}]->(APO11_01),
+(BAI02_04)-[:conn{bez:['Approved quality reviews']}]->(APO11_02),
+(OutsideCOBIT)-[:conn{bez:['• Industry good practices • Available quality certifications']}]->(APO11_02),
+(OutsideCOBIT)-[:conn{bez:['Business and customer quality requirements']}]->(APO11_03),
+(BAI03_06)-[:conn{bez:['• Quality review results, exceptions and corrections • Quality assurance plan']}]->(APO11_04),
+(DSS02_07)-[:conn{bez:['• Request fulfilment status and trends report • Incident status and trends report']}]->(APO11_04),
+(EDM03_01)-[:conn{bez:['Evaluation of risk management activities']}]->(APO12_01),
+(EDM03_02)-[:conn{bez:['• Approved process for measuring risk management • Key objectives to be monitored for risk management • Risk management policies']}]->(APO12_01),
+(APO02_02)-[:conn{bez:['Gaps and risk related to current capabilities']}]->(APO12_01),
+(APO02_05)-[:conn{bez:['Risk assessment']}]->(APO12_01),
+(APO10_04)-[:conn{bez:['Identified supplier delivery risk']}]->(APO12_01),
+(DSS02_07)-[:conn{bez:['Incident status and trends report']}]->(APO12_01),
+(EDM03_01)-[:conn{bez:['• Approved risk tolerance levels • Risk appetite guidance']}]->(APO12_03),
+(APO10_04)-[:conn{bez:['Identified supplier delivery risk']}]->(APO12_03),
+(DSS05_01)-[:conn{bez:['Evaluations of potential threats']}]->(APO12_03),
+(EDM03_03)-[:conn{bez:['Remedial actions to address risk management deviations']}]->(APO12_06),
+(OutsideCOBIT)-[:conn{bez:['Enterprise security approach']}]->(APO13_01),
+(APO02_04)-[:conn{bez:['Gaps and changes required to realise target capability']}]->(APO13_02),
+(APO03_02)-[:conn{bez:['Baseline domain descriptions and architecture definition']}]->(APO13_02),
+(APO12_05)-[:conn{bez:['Project proposals for reducing risk']}]->(APO13_02),
+(DSS02_02)-[:conn{bez:['Classified and prioritised incidents and service requests']}]->(APO13_03),
+//BAI
+(EDM02_02)-[:conn {bez:['Requirements for stage-gate reviews']}]->(BAI01_01),
+(EDM02_03)-[:conn {bez:['Actions to improve value delivery']}]->(BAI01_01),
+(APO03_04)-[:conn {bez:['• Architecture governance requirements • Implementation phase descriptions']}]->(BAI01_01),
+(APO05_05)-[:conn {bez:['Updated portfolios of programmes, services and assets']}]->(BAI01_01),
+(APO10_04)-[:conn {bez:['Identified supplier delivery risk']}]->(BAI01_01),
+(APO03_04)-[:conn {bez:['• Implementation phase descriptions • Resource requirements']}]->(BAI01_02),
+(APO05_03)-[:conn {bez:['Programme business case']}]->(BAI01_02),
+(APO07_03)-[:conn {bez:['Skills and competencies matrix']}]->(BAI01_02),
+(BAI05_02)-[:conn {bez:['Common vision and goals']}]->(BAI01_02),
+(APO05_03)-[:conn {bez:['Selected programmes with ROI milestones']}]->(BAI01_04),
+(APO07_03)-[:conn {bez:['Skills and competencies matrix']}]->(BAI01_04),
+(APO07_05)-[:conn {bez:['Inventory of business and IT human resources']}]->(BAI01_04),
+(BAI05_02)-[:conn {bez:['Implementation team and roles']}]->(BAI01_04),
+(BAI05_03)-[:conn {bez:['Vision communication plan']}]->(BAI01_04),
+(BAI05_04)-[:conn {bez:['Identified quick wins']}]->(BAI01_04),
+(BAI07_03)-[:conn {bez:['Approved acceptance test plan']}]->(BAI01_04),
+(BAI07_05)-[:conn {bez:['Approved acceptance and release for production']}]->(BAI01_04),
+(BAI05_03)-[:conn {bez:['Vision communications']}]->(BAI01_05),
+(EDM02_03)-[:conn {bez:['Feedback on portfolio and programme performance']}]->(BAI01_06),
+(APO05_02)-[:conn {bez:['Investment return expectations']}]->(BAI01_06),
+(APO05_03)-[:conn {bez:['Business case assessments']}]->(BAI01_06),
+(APO05_04)-[:conn {bez:['Investment portfolio performance reports']}]->(BAI01_06),
+(APO05_06)-[:conn {bez:['• Corrective actions to improve benefit realisation • Benefit results and related communications']}]->(BAI01_06),
+(APO07_05)-[:conn {bez:['• Resource utilisation records • Resourcing shortfall analyses']}]->(BAI01_06),
+(BAI05_04)-[:conn {bez:['Communication of benefits']}]->(BAI01_06),
+(BAI06_03)-[:conn {bez:['Change request status reports']}]->(BAI01_06),
+(BAI07_05)-[:conn {bez:['Evaluation of acceptance results']}]->(BAI01_06),
+(BAI07_03)-[:conn {bez:['Approved acceptance test plan']}]->(BAI01_08),
+(APO11_01)-[:conn {bez:['Quality management plans']}]->(BAI01_09),
+(APO11_03)-[:conn {bez:['Customer requirements for quality management']}]->(BAI01_09),
+(APO12_02)-[:conn {bez:['Risk analysis results']}]->(BAI01_10),
+(BAI02_03)-[:conn {bez:['• Risk mitigation actions • Requirements risk register']}]->(BAI01_10),
+(OutsideCOBIT)-[:conn {bez:['ERM framework']}]->(BAI01_10),
+(BAI07_08)-[:conn {bez:['• Remedial action plan • Post-implementation review report']}]->(BAI01_13),
+(BAI07_08)-[:conn {bez:['• Remedial action plan • Post-implementation review report']}]->(BAI01_14),
+(APO01_06)-[:conn {bez:['• Data integrity procedures • Data security and control guidelines • Data classification guidelines']}]->(BAI02_01),
+(APO03_01)-[:conn {bez:['Architecture principles']}]->(BAI02_01),
+(APO03_02)-[:conn {bez:['• Information architecture model • Baseline domain descriptions and architecture definition']}]->(BAI02_01),
+(APO03_05)-[:conn {bez:['Solution development guidance']}]->(BAI02_01),
+(APO10_02)-[:conn {bez:['Supplier RFIs and RFPs']}]->(BAI02_01),
+(APO11_03)-[:conn {bez:['Acceptance criteria']}]->(BAI02_01),
+(APO03_05)-[:conn {bez:['Solution development guidance']}]->(BAI02_02),
+(APO10_01)-[:conn {bez:['Supplier catalogue']}]->(BAI02_02),
+(APO10_02)-[:conn {bez:['• Decision results of supplier  evaluations • RFI and RFP evaluations • Supplier RFIs and RFPs']}]->(BAI02_02),
+(APO11_03)-[:conn {bez:['Acceptance criteria']}]->(BAI02_02),
+(BAI01_09)-[:conn {bez:['Quality management plan']}]->(BAI02_04),
+(APO03_01)-[:conn {bez:['Architecture principles']}]->(BAI03_01),
+(APO03_02)-[:conn {bez:['Baseline domain descriptions and architecture definition']}]->(BAI03_01),
+(APO04_03)-[:conn {bez:['Research analyses of innovation possibilities']}]->(BAI03_01),
+(APO04_04)-[:conn {bez:['Evaluations of innovation ideas']}]->(BAI03_01),
+(BAI02_01)-[:conn {bez:['• Confirmed acceptance criteria from stakeholders • Requirements definition repository']}]->(BAI03_01),
+(BAI02_02)-[:conn {bez:['High-level acquisition/ development plan']}]->(BAI03_01),
+(APO03_01)-[:conn {bez:['Architecture principles']}]->(BAI03_02),
+(APO03_02)-[:conn {bez:['• Information architecture model • Baseline domain descriptions and architecture definition']}]->(BAI03_02),
+(APO03_05)-[:conn {bez:['Solution development guidance']}]->(BAI03_02),
+(APO04_06)-[:conn {bez:['Assessments of using innovative approaches']}]->(BAI03_02),
+(BAI02_01)-[:conn {bez:['• Confirmed acceptance criteria from stakeholders • Requirements definition repository']}]->(BAI03_02),
+(BAI02_02)-[:conn {bez:['Feasibility study report']}]->(BAI03_02),
+(BAI02_03)-[:conn {bez:['• Risk mitigation actions • Requirements risk register']}]->(BAI03_02),
+(BAI02_04)-[:conn {bez:['Sponsor approvals of requirements and proposed solutions']}]->(BAI03_02),
+(BAI02_02)-[:conn {bez:['Feasibility study report']}]->(BAI03_03),
+(BAI02_04)-[:conn {bez:['Sponsor approvals of requirements and proposed solutions']}]->(BAI03_03),
+(BAI02_04)-[:conn {bez:['Sponsor approvals of requirements and proposed solutions']}]->(BAI03_04),
+(APO11_01)-[:conn {bez:['Results of QMS effectiveness reviews']}]->(BAI03_06),
+(BAI01_09)-[:conn {bez:['Quality management plan']}]->(BAI03_06),
+(APO04_05)-[:conn {bez:['Analysis of rejected initiatives']}]->(BAI03_08),
+(APO04_05)-[:conn {bez:['Results and recommendations from proof-of-concept initiatives']}]->(BAI03_09),
+(BAI02_01)-[:conn {bez:['Record of requirement change requests']}]->(BAI03_09),
+(EDM04_01)-[:conn {bez:['Guiding principles for allocation of resources and capabilities']}]->(BAI03_11),
+(APO02_04)-[:conn {bez:['• Value benefit statement for target environment • Gaps and changes required to realise target capability']}]->(BAI03_11),
+(APO06_02)-[:conn {bez:['Budget allocations']}]->(BAI03_11),
+(APO06_03)-[:conn {bez:['• Budget communications • IT budget and plan']}]->(BAI03_11),
+(APO08_05)-[:conn {bez:['Definition of potential improvement projects']}]->(BAI03_11),
+(BAI10_02)-[:conn {bez:['Configuration baseline']}]->(BAI03_11),
+(BAI10_03)-[:conn {bez:['Approved changes to baseline']}]->(BAI03_11),
+(BAI10_04)-[:conn {bez:['Configuration status reports']}]->(BAI03_11),
+(BAI02_01)-[:conn {bez:['Requirements definition repository']}]->(BAI04_01),
+(BAI02_03)-[:conn {bez:['Requirements risk register']}]->(BAI04_01),
+(BAI03_02)-[:conn {bez:['Internal and external SLAs']}]->(BAI04_02),
+(BAI02_01)-[:conn {bez:['Confirmed acceptance criteria from stakeholders']}]->(BAI04_03),
+(BAI03_01)-[:conn {bez:['Approved high-level design specification']}]->(BAI04_03),
+(BAI03_02)-[:conn {bez:['Approved detailed design specification']}]->(BAI04_03),
+(BAI03_03)-[:conn {bez:['Documented solution components']}]->(BAI04_03),
+(APO11_03)-[:conn {bez:['Results of quality of service, including customer feedback']}]->(BAI05_01),
+(BAI02_01)-[:conn {bez:['• Confirmed acceptance criteria from stakeholders • Requirements definition repository']}]->(BAI05_01),
+(BAI02_03)-[:conn {bez:['• Risk mitigation actions • Requirements risk register']}]->(BAI05_01),
+(BAI03_01)-[:conn {bez:['Approved high-level design specification']}]->(BAI05_01),
+(BAI03_02)-[:conn {bez:['Approved detailed design specification']}]->(BAI05_01),
+(BAI02_01)-[:conn {bez:['Confirmed acceptance criteria from stakeholders']}]->(BAI05_02),
+(OutsideCOBIT)-[:conn {bez:['EnterpriseOrganisational structure']}]->(BAI05_04),
+(BAI03_03)-[:conn {bez:['Documented solution components']}]->(BAI05_05),
+(BAI03_10)-[:conn {bez:['Updated solution components and related documentation']}]->(BAI05_05),
+(BAI03_05)-[:conn {bez:['Integrated and configured solution components']}]->(BAI06_01),
+(DSS02_03)-[:conn {bez:['Approved service requests']}]->(BAI06_01),
+(DSS03_03)-[:conn {bez:['Proposed solutions to known errors']}]->(BAI06_01),
+(DSS03_05)-[:conn {bez:['Identified sustainable solutions']}]->(BAI06_01),
+(DSS04_08)-[:conn {bez:['Approved changes to the plans']}]->(BAI06_01),
+(DSS06_01)-[:conn {bez:['Root cause analyses and recommendations']}]->(BAI06_01),
+(BAI03_09)-[:conn {bez:['Record of all approved and applied change requests']}]->(BAI06_03),
+(BAI01_09)-[:conn {bez:['Quality management plan']}]->(BAI07_01),
+(BAI06_01)-[:conn {bez:['• Change plan and schedule • Approved requests for change']}]->(BAI07_01),
+(BAI01_09)-[:conn {bez:['Requirements for independent verification of deliverables']}]->(BAI07_03),
+(BAI03_07)-[:conn {bez:['• Test procedures • Test plan']}]->(BAI07_03),
+(BAI03_08)-[:conn {bez:['• Test result communications • Test result logs and audit  trails']}]->(BAI07_03),
+(APO11_03)-[:conn {bez:['Review results of quality of service, including customer feedback']}]->(BAI07_07),
+(BAI05_05)-[:conn {bez:['Success measures and results']}]->(BAI07_07),
+(APO11_04)-[:conn {bez:['Results of quality reviews and audits']}]->(BAI07_08),
+(APO11_05)-[:conn {bez:['• Root causes of quality delivery failures • Results of solution and service delivery  quality monitoring']}]->(BAI07_08),
+(BAI05_05)-[:conn {bez:['Success measures and results']}]->(BAI07_08),
+(OutsideCOBIT)-[:conn {bez:['Knowledge requirements and sources']}]->(BAI08_02),
+(BAI03_03)-[:conn {bez:['Documented solution components']}]->(BAI08_03),
+(BAI05_07)-[:conn {bez:['Knowledge transfer plans']}]->(BAI08_03),
+(BAI03_03)-[:conn {bez:['Documented solution components']}]->(BAI08_04),
+(BAI05_05)-[:conn {bez:['Operation and use plan']}]->(BAI08_04),
+(BAI05_07)-[:conn {bez:['Knowledge transfer plans']}]->(BAI08_04),
+(BAI03_04)-[:conn {bez:['Updates to asset inventory']}]->(BAI09_01),
+(BAI10_02)-[:conn {bez:['Configuration repository']}]->(BAI09_01),
+(BAI07_06)-[:conn {bez:['Release plan']}]->(BAI10_01),
+(BAI09_05)-[:conn {bez:['Register of software licences']}]->(BAI10_02),
+(BAI06_03)-[:conn {bez:['Change request status reports']}]->(BAI10_03),
+(BAI09_01)-[:conn {bez:['• Results of physical inventory checks • Asset register']}]->(BAI10_03),
+(BAI09_03)-[:conn {bez:['• Authorised asset retirements • Updated asset register']}]->(BAI10_03),
+(BAI09_01)-[:conn {bez:['Results of physical inventory checks']}]->(BAI10_04),
+//DSS
+(BAI05_05)-[:conn {bez:['Operation and use plan']}]->(DSS01_01),
+(APO09_03)-[:conn {bez:['• OLAs • SLAs']}]->(DSS01_02),
+(BAI05_05)-[:conn {bez:['Operation and use plan']}]->(DSS01_02),
+(BAI03_11)-[:conn {bez:['Service definitions']}]->(DSS01_03),
+(APO09_03)-[:conn {bez:['SLAs']}]->(DSS02_01),
+(BAI10_02)-[:conn {bez:['Configuration repository']}]->(DSS02_01),
+(BAI10_03)-[:conn {bez:['Updated repository with configuration items']}]->(DSS02_01),
+(BAI10_04)-[:conn {bez:['Configuration status reports']}]->(DSS02_01),
+(DSS01_03)-[:conn {bez:['Asset monitoring rules and event conditions']}]->(DSS02_01),
+(DSS03_01)-[:conn {bez:['Problem classification scheme']}]->(DSS02_01),
+(DSS04_03)-[:conn {bez:['Incident response actions and communications']}]->(DSS02_01),
+(APO09_03)-[:conn {bez:['SLAs']}]->(DSS02_02),
+(BAI04_05)-[:conn {bez:['Emergency escalation procedure']}]->(DSS02_02),
+(DSS01_03)-[:conn {bez:['• Incident tickets • Asset monitoring rules and event conditions']}]->(DSS02_02),
+(DSS05_07)-[:conn {bez:['Security incident tickets']}]->(DSS02_02),
+(APO12_06)-[:conn {bez:['Risk-related root causes']}]->(DSS02_03),
+(BAI07_07)-[:conn {bez:['Supplemental support plan']}]->(DSS02_04),
+(APO12_06)-[:conn {bez:['Risk-related incident response plans']}]->(DSS02_05),
+(DSS03_03)-[:conn {bez:['Known error records']}]->(DSS02_05),
+(DSS03_04)-[:conn {bez:['Communication of knowledge learned']}]->(DSS02_05),
+(DSS03_04)-[:conn {bez:['Closed problem records']}]->(DSS02_06),
+(APO09_03)-[:conn {bez:['OLAs']}]->(DSS02_07),
+(DSS03_01)-[:conn {bez:['Problem status reports']}]->(DSS02_07),
+(DSS03_02)-[:conn {bez:['Problem resolution reports']}]->(DSS02_07),
+(DSS03_05)-[:conn {bez:['Problem resolution monitoring reports']}]->(DSS02_07),
+(APO12_06)-[:conn {bez:['Risk-related root causes']}]->(DSS03_01),
+(DSS02_01)-[:conn {bez:['Criteria for problem registration']}]->(DSS03_01),
+(DSS02_04)-[:conn {bez:['Problem log']}]->(DSS03_01),
+(APO12_06)-[:conn {bez:['Risk-related root causes']}]->(DSS03_02),
+(DSS02_05)-[:conn {bez:['Incident resolutions']}]->(DSS03_04),
+(DSS02_06)-[:conn {bez:['Closed service requests and incidents']}]->(DSS03_04),
+(APO09_03)-[:conn {bez:['SLAs']}]->(DSS04_01),
+(APO12_06)-[:conn {bez:['• Risk-related root causes • Risk impact communications']}]->(DSS04_02),
+(APO09_03)-[:conn {bez:['OLAs']}]->(DSS04_03),
+(HR)-[:conn {bez:['List of personnel requiring training']}]->(DSS04_06),
+(APO01_06)-[:conn {bez:['Data classification guidelines']}]->(DSS05_02),
+(APO09_03)-[:conn {bez:['SLAs']}]->(DSS05_02),
+(APO03_02)-[:conn {bez:['Information architecture model']}]->(DSS05_03),
+(APO09_03)-[:conn {bez:['• OLAs • SLAs']}]->(DSS05_03),
+(BAI09_01)-[:conn {bez:['Results of physical inventory checks']}]->(DSS05_03),
+(DSS06_06)-[:conn {bez:['Reports of violations']}]->(DSS05_03),
+(APO01_02)-[:conn {bez:['Definition of IT-related roles and responsibilities']}]->(DSS05_04),
+(APO03_02)-[:conn {bez:['Information architecture model']}]->(DSS05_04),
+(APO03_02)-[:conn {bez:['Information architecture model']}]->(DSS05_06),
+(APO01_06)-[:conn {bez:['• Data integrity procedures • Data classification guidelines']}]->(DSS06_01),
+(BAI05_05)-[:conn {bez:['Operation and use plan']}]->(DSS06_02),
+(BAI07_02)-[:conn {bez:['Migration plan']}]->(DSS06_02),
+(EDM04_02)-[:conn {bez:['Assigned responsibilities for resource management']}]->(DSS06_03),
+(APO11_01)-[:conn {bez:['QMS roles, responsibilities and decision rights']}]->(DSS06_03),
+(APO13_01)-[:conn {bez:['ISMS scope statement']}]->(DSS06_03),
+(DSS05_05)-[:conn {bez:['Access logs']}]->(DSS06_03),
+//MEA
+(EDM05_01)-[:conn {bez:['• Reporting and communications principles • Evaluation of enterprise reporting requirements']}]->(MEA01_01),
+(EDM05_02)-[:conn {bez:['Rules for validating and approving mandatory reports']}]->(MEA01_01),
+(EDM05_03)-[:conn {bez:['Assessment of reporting effectiveness']}]->(MEA01_01),
+(APO01_07)-[:conn {bez:['Performance goals and metrics for process improvement tracking']}]->(MEA01_02),
+(APO01_07)-[:conn {bez:['Process capability assessments']}]->(MEA01_03),
+(APO05_04)-[:conn {bez:['Investment portfolio performance reports']}]->(MEA01_03),
+(APO09_04)-[:conn {bez:['Service level performance reports']}]->(MEA01_03),
+(APO10_05)-[:conn {bez:['Supplier compliance monitoring review results']}]->(MEA01_03),
+(BAI01_06)-[:conn {bez:['Results of programme performance reviews']}]->(MEA01_03),
+(BAI04_04)-[:conn {bez:['Availability, performance and capacity monitoring review reports']}]->(MEA01_03),
+(BAI05_05)-[:conn {bez:['Success measures and results']}]->(MEA01_03),
+(DSS01_05)-[:conn {bez:['Facilities assessment reports']}]->(MEA01_03),
+(DSS02_07)-[:conn {bez:['• Request fulfilment status and trends report • Incident status and trends report']}]->(MEA01_03),
+(EDM05_02)-[:conn {bez:['Escalation guidelines']}]->(MEA01_05),
+(APO01_08)-[:conn {bez:['Non-compliance remedial actions']}]->(MEA01_05),
+(APO12_04)-[:conn {bez:['Results of third-party risk assessments']}]->(MEA02_01),
+(APO13_03)-[:conn {bez:['ISMS audit reports']}]->(MEA02_01),
+(OutsideCOBIT)-[:conn {bez:['Industry standards and good practices']}]->(MEA02_01),
+(BAI05_06)-[:conn {bez:['Compliance audit results']}]->(MEA02_02),
+(BAI05_07)-[:conn {bez:['Reviews of operational use']}]->(MEA02_02),
+(APO11_05)-[:conn {bez:['Root causes of quality delivery failures']}]->(MEA02_04),
+(APO12_06)-[:conn {bez:['Risk-related root causes']}]->(MEA02_04),
+(DSS06_01)-[:conn {bez:['• Root cause analyses and recommendations • Results of processing effectiveness reviews']}]->(MEA02_04),
+(DSS06_04)-[:conn {bez:['Evidence of error correction and remediation']}]->(MEA02_04),
+(BAI01_05)-[:conn {bez:['Programme audit plans']}]->(MEA02_06),
+(DSS01_02)-[:conn {bez:['Independent assurance plans']}]->(MEA02_06),
+(APO11_05)-[:conn {bez:['Root causes of quality delivery failures']}]->(MEA02_07),
+(APO12_06)-[:conn {bez:['Risk-related root causes']}]->(MEA02_07),
+(DSS06_01)-[:conn {bez:['Root cause analyses and recommendations']}]->(MEA02_07),
+(MEA03_04)-[:conn {bez:['Reports of non-compliance issues and root causes']}]->(MEA02_07),
+(APO11_05)-[:conn {bez:['Root causes of quality delivery failures']}]->(MEA02_08),
+(APO12_04)-[:conn {bez:['Risk analysis and  risk profile reports for stakeholders']}]->(MEA02_08),
+(APO12_06)-[:conn {bez:['Risk-related root causes']}]->(MEA02_08),
+(DSS05_02)-[:conn {bez:['Results of penetration tests']}]->(MEA02_08),
+(DSS06_01)-[:conn {bez:['Root cause analyses and recommendations']}]->(MEA02_08),
+(MEA03_03)-[:conn {bez:['Identified compliance gaps']}]->(MEA02_08),
+(OutsideCOBIT)-[:conn {bez:['Legal and regulatory compliance requirements']}]->(MEA03_01),
+(BAI05_06)-[:conn {bez:['Compliance audit results']}]->(MEA03_03),
+(BAI09_05)-[:conn {bez:['Results of installed licence audits']}]->(MEA03_03),
+(BAI10_05)-[:conn {bez:['Licence deviations']}]->(MEA03_03),
+(DSS01_04)-[:conn {bez:['Insurance policy reports']}]->(MEA03_03),
+(EDM05_02)-[:conn {bez:['Rules for validating and approving mandatory reports']}]->(MEA03_04),
+(EDM05_03)-[:conn {bez:['Assessment of reporting effectiveness']}]->(MEA03_04);
